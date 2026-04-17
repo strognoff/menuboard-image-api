@@ -161,7 +161,6 @@ async def generate(
         value=session_id,
         max_age=SESSION_WINDOW_SECS,
         httponly=True,
-        same_site="lax",
     )
     response.headers["X-RateLimit-Remaining"] = str(remaining)
     response.headers["X-RateLimit-Reset"] = str(reset_in)
